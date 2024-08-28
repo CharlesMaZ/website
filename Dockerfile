@@ -9,6 +9,11 @@ RUN npm install
 COPY . .
 RUN npm run build
 
+RUN npm install -g serve
+CMD ["serve", "-s", "dist"]
+
 EXPOSE 80
 
-CMD ["npm", "run", "dev"]
+# CMD ["npm", "run", "dev"]
+
+
